@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav>          
+        <ul>
+            <li><a href="starter.html"><i class="fas fa-home"></i></a></li>
+            <li><a href="#addInfo">Add Information</a></li>
+            <li><a href="#deleteinfo">Delete Information</a></li>
+            <li><a href="#searchinfo">Search Information</a></li>
+            <li><i id="voice-icon" class="fas fa-volume-up"></i></li>
+            <div class="dropdown">
+        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+        <div class="dropdown-content">
+          <a href="#" onclick="changeTheme('theme1')">Theme 1</a>
+          <a href="#" onclick="changeTheme('theme2')">Theme 2</a>
+          <a href="#" onclick="changeTheme('theme3')">Theme 3</a>
+        </div>
+        
+      </div>
+
+        </ul>
+    </nav>
+    
+    <div class="container">  
+        <section id="addInfo">      
+            <form id="card-form" name="submit-to-google-sheet">
+                <input type="date"  id="date" name="Date" placeholder="Date" required>
+                <input type="time"  id="time" name="Time" placeholder="Time" required>
+                <input type="text"  id="title" name="Title" placeholder="Title" required>
+                <input type="text"  id="description" name="Description" placeholder="Description">
+                <input type="text"  id="event" name="Event" placeholder="Event">
+                <input type="text"  id="nearest-place" name="Place" placeholder="Nearest Place">
+                <input type="file" id="image" placeholder="select image">
+                <button type="submit" style="border-radius: 18px;">Add Card</button>
+            </form>
+        </section>
+
+        <section id="searchinfo">
+            <input type="text" id="search-input" placeholder="Search...">
+            <div id="card-list"></div>
+        </section>
+
+        <section id="deleteinfo">
+            <button id="delete-all" style="border-radius: 18px;">Delete All Cards</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
